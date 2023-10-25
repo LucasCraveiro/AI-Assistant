@@ -253,6 +253,7 @@ body {
 
 #info_blocks {
   display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 28px;
 }
@@ -264,11 +265,11 @@ body {
 #info_blocks .card {
   display: flex;
   flex-direction: column;
-  /* background-color: #f9fafb; */
-  background-color: rgba(230, 230, 230, 0.717);
+  background-color: #f9fafb;
+  /* background-color: lightgray; */
   border-radius: 16px;
-  flex-basis: 50%;
-  width: calc(50% - 0.75rem);
+  flex-basis: 100%;
+  width: 100%;
 }
 
 #info_blocks .card .content_wrapper {
@@ -277,24 +278,12 @@ body {
   padding: 3vw;
 }
 
-@media only screen and (min-width: 992px) {
-  #info_blocks .card .content_wrapper {
-    padding: 56px;
-  }
-}
-
 #info_blocks .card .content_wrapper .title {
   font-weight: 700;
   font-size: 40px;
   line-height: 56px;
   color: #111827;
   margin: 0;
-}
-
-@media only screen and (min-width: 1200px) {
-  #info_blocks .card .content_wrapper .title {
-    font-size: 48px;
-  }
 }
 
 #info_blocks .card .content_wrapper .top_title {
@@ -314,10 +303,53 @@ body {
   margin-top: 16px;
 }
 
+@media only screen and (min-width: 768px) {
+  #info_blocks {
+    flex-direction: row;
+  }
+
+  #info_blocks .card {
+    flex-basis: 50%;
+    width: calc(50% - 0.75rem);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #info_blocks .card .content_wrapper {
+    padding: 56px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #info_blocks .card .content_wrapper .title {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #info_blocks .card .content_wrapper .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #info_blocks .card .content_wrapper .top_title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  #info_blocks .card .content_wrapper .description {
+    text-align: center;
+  }
+}
+
 /* ASSISTANTE DOCS SECTION*/
 #assistant_docs {
-  background-color: rgba(230, 230, 230, 0.717);
-  /* background-color: #f9fafb; */
+  background-color: #f9fafb;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -375,7 +407,7 @@ body {
   gap: 1rem;
 }
 
-#assistant_docs img {
+#assistant_docs .assistant_img {
   max-width: 654px;
 }
 
@@ -390,7 +422,7 @@ body {
     font-size: 56px;
   }
 
-  #assistant_docs img {
+  #assistant_docs .assistant_img {
     max-width: 854px;
   }
 }
@@ -401,19 +433,43 @@ body {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  #assistant_docs .content_wrapper .top_title {
+    font-size: 16px;
+  }
+
+  #assistant_docs .content_wrapper .title {
+    font-size: 28px;
+    line-height: 36px;
+    width: 50%;
+    margin: 0 auto 16px;
+  }
+
+  #assistant_docs .content_wrapper .description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+  }
+
+  #assistant_docs .assistant_img {
+    max-width: 354px;
+  }
+}
+
 /* CTA SECTION*/
 #try_durable_CTA {
   background-color: #4c35de;
   min-height: 344px;
   border-radius: 16px;
   background-image: url("assets/Pattern2.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding: 10px 50px;
 }
 
 #try_durable_CTA .title {
@@ -422,16 +478,15 @@ body {
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
-  margin: 0 0 0 56px;
+  margin: 0;
 }
 
 #try_durable_CTA .description {
   color: #e4e0ff;
   font-family: "Inter";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 32px;
-  margin: 16px 0 16px 56px;
+  line-height: 28px;
 }
 
 #try_durable_CTA .generate_button {
@@ -445,7 +500,6 @@ body {
   background-color: white;
   border-radius: 12px;
   margin-top: 32px;
-  margin-left: 56px;
   transition: all ease-in-out 0.2s;
 }
 
@@ -453,13 +507,40 @@ body {
   transform: scale(1.1);
 }
 
+.break_line_CTA {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
+  #try_durable_CTA {
+    padding: 0;
+    background-size: contain;
+  }
+
   #try_durable_CTA .title {
-    color: white;
-    font-family: "Inter";
     font-size: 48px;
     line-height: 56px;
     margin: 0 0 0 56px;
+  }
+
+  #try_durable_CTA .description {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 16px 0 16px 56px;
+  }
+
+  #try_durable_CTA .generate_button {
+    margin-left: 56px;
+  }
+
+  .break_line_CTA {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #try_durable_CTA .generate_button {
+    align-self: center;
   }
 }
 
