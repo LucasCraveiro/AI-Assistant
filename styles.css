@@ -34,8 +34,7 @@ body {
 }
 
 .navBar .logo_links_container .links_container {
-  display: flex;
-  gap: 2rem;
+  display: none;
 }
 
 .navBar .logo_links_container .logo_link {
@@ -67,24 +66,188 @@ body {
   opacity: 0.7;
 }
 
-.navBar .signin_wrapper .signin_button {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-family: "Inter";
-  font-weight: 600;
-  color: #111827;
-  font-size: 16px;
-  line-height: 24px;
-  border: solid 2px #f3f4f6;
-  transition: all ease-in-out 0.2s;
+.navBar .signin_wrapper .bars:hover {
+  opacity: 0.8;
 }
 
-.navBar .signin_wrapper .signin_button:hover {
-  border-color: #111827;
+.navBar .signin_wrapper .signin_button {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navBar .logo_links_container .links_container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .navBar .signin_wrapper .signin_button {
+    display: block;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-family: "Inter";
+    font-weight: 600;
+    color: #111827;
+    font-size: 16px;
+    line-height: 24px;
+    border: solid 2px #f3f4f6;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .navBar .signin_wrapper .signin_button:hover {
+    border-color: #111827;
+  }
+
+  .navBar .signin_wrapper .bars {
+    display: none;
+  }
 }
 
 /* HERO SECTION*/
+#hero_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  height: 90vh;
+  padding-top: 72px;
+  background-image: url("assets/pattern_hero.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+#hero_section * {
+  font-family: "Inter";
+  text-align: center;
+}
+
+#hero_section .content_wrapper_hero .title {
+  font-family: "Crimson Pro";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: #111827;
+}
+
+#hero_section .content_wrapper_hero .description {
+  display: none;
+}
+
+#hero_section .content_wrapper_hero .get_started_hero_button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+  background-color: #4c35de;
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-decoration: none;
+  border: 2px solid #4c35de;
+  transition: all ease-in-out 0.2s;
+}
+
+#hero_section .content_wrapper_hero .get_started_hero_button:hover {
+  color: #4c35de;
+  background-color: white;
+}
+
+#hero_section .input_wrapper {
+  position: relative;
+  margin-top: 70px;
+  box-shadow: 0px 0px 0px 6.000000476837158px #4c35de29;
+  border-radius: 12px;
+}
+
+#hero_section .input_wrapper #input_user {
+  padding: 10px 0;
+  border-radius: 12px;
+  border: 2px solid #4c35de;
+  width: 400px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #6b7280;
+  text-align: start;
+  padding-left: 40px;
+}
+
+#hero_section .input_wrapper #input_user::placeholder {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #6b7280;
+  text-align: start;
+}
+
+#hero_section .input_wrapper .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 20px;
+}
+
+#hero_section .image_wrapper {
+  position: relative;
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+}
+
+#hero_section .image_wrapper.show {
+  opacity: 1;
+}
+
+#hero_section .image_wrapper .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to top, #ffffff8e, transparent);
+  background-size: 100% 100%, auto;
+  background-repeat: no-repeat, repeat-y;
+  z-index: 1000;
+}
+
+@media only screen and (min-width: 768px) {
+  #hero_section {
+    height: 90vh;
+    padding-top: 72px;
+  }
+
+  #hero_section .content_wrapper_hero .title {
+    font-size: 72px;
+    line-height: 80px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  #hero_section .content_wrapper_hero .description {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #6b7280;
+    margin-bottom: 40px;
+  }
+
+  #hero_section .image_wrapper {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #hero_section {
+    height: 70vh;
+  }
+
+  #hero_section .image_wrapper .options {
+    max-width: 550px;
+  }
+}
 
 /* INFO BLOCKS */
 
