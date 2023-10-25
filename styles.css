@@ -59,8 +59,9 @@ body {
 }
 
 /* HERO SECTION*/
+
 /* CTA SECTION*/
-.try_durable_CTA {
+#try_durable_CTA {
   background-color: #4c35de;
   min-height: 344px;
   border-radius: 16px;
@@ -74,7 +75,7 @@ body {
   justify-content: center;
 }
 
-.try_durable_CTA .title {
+#try_durable_CTA .title {
   color: white;
   font-family: "Inter";
   font-size: 48px;
@@ -84,7 +85,7 @@ body {
   /* padding-left: 56px; */
 }
 
-.try_durable_CTA .description {
+#try_durable_CTA .description {
   color: #e4e0ff;
   font-family: "Inter";
   font-size: 20px;
@@ -93,7 +94,7 @@ body {
   margin: 16px 0 16px 56px;
 }
 
-.try_durable_CTA .generate_button {
+#try_durable_CTA .generate_button {
   color: black;
   font-family: "Inter";
   text-decoration: none;
@@ -105,4 +106,107 @@ body {
   border-radius: 12px;
   margin-top: 32px;
   margin-left: 56px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 72px;
+  padding-bottom: 50px;
+}
+
+.footer_logo_container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  padding-left: 60px;
+}
+
+.footer_logo_container * {
+  font-family: "Inter";
+}
+
+.footer_logo_container p {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.footer_logo_container .language_box {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.footer_logo_container .language_box p {
+  font-weight: 600;
+  color: #111827;
+}
+
+.footer_logo_container .language_box #language_select {
+  border: none;
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+  line-height: 24px;
+  padding-right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("/assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.footer_logo_container .language_box #language_select option {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer_logo_container #social_media_container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 24px;
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+  flex-basis: 50%;
+}
+
+.footer_links * {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer_links .links_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer_links .links_box h5 {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.footer_links .links_box a {
+  font-weight: 400;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.footer_links .links_box a:hover {
+  color: #6b728077;
 }
