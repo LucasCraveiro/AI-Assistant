@@ -1,14 +1,17 @@
 const inputElement = document.getElementById("input_user");
 
 const imageWrapper = document.getElementById("image_wrapper");
+const infoBlock = document.getElementById("info_blocks");
 
 inputElement.addEventListener("click", function () {
   imageWrapper.classList.add("show");
+  infoBlock.style.marginTop = "110px";
 });
 
 inputElement.addEventListener("keydown", function (event) {
   if (event.key !== "") {
     imageWrapper.classList.remove("show");
+    infoBlock.style.marginTop = "0px";
   }
 });
 
