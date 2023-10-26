@@ -21,7 +21,6 @@ body {
 }
 
 /* NAVBAR*/
-
 .navBar {
   padding: 24px 0;
   display: flex;
@@ -250,7 +249,6 @@ body {
 }
 
 /* INFO BLOCKS */
-
 #info_blocks {
   display: flex;
   flex-direction: column;
@@ -725,4 +723,16 @@ footer {
   .footer_links {
     gap: 15rem;
   }
+}
+
+/* Lazy Loading */
+.lazy-section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+
+.lazy-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
